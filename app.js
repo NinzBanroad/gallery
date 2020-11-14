@@ -7,7 +7,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = new Koa();
-const port = Process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 // const config = require(`${appRoot}/config`);
 
@@ -26,7 +26,7 @@ async function server() {
 	// } catch (err) {
 	// 	console.log(err);
     // }
-    app.listen(port, () => console.log(`running on port ${port}`));
+    app.listen(PORT, () => console.log(`running on port ${PORT}`));
 
 }
 
@@ -36,6 +36,7 @@ render(app, {
 	viewExt: 'ejs',
 	cache: false
 });
+
 
 app.use(index.routes(), index.allowedMethods());
 
