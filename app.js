@@ -7,7 +7,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = new Koa();
-const port = 5000;
+const port = Process.env.PORT || 5000;
 
 // const config = require(`${appRoot}/config`);
 
